@@ -4,8 +4,13 @@ layout: single
 classes: wide
 ---
 
+In order for your homeworks to be graded, they must run on the docker. We will use the docker image from CSE110A (Spring 2022) for this class. 
 
-This guide walks you through developing and running your homeworks using a Docker container running Ubuntu.
+**The docker has a very simple Ubuntu OS. If you use a linux/MacOS/WSL environment then it will likely work. However, please double check that code works on the docker imagine just to be sure. If it does not run, then it won't be graded.**
+
+**Please make sure you understand the storage model of Docker as not all storage is persistant! It is always a good idea to back up your work in progress, e.g., using git. But please don't make your homework git repos public!**
+
+_Thanks to Yanwen Xu for setting up the docker and writing the instructons!_
 
 ------
 
@@ -22,8 +27,6 @@ docker pull yxu83/cse110a:latest
 ```
 
 When running, the container includes everything necessary for the homework to work correctly, namely `python3`, C++ compilers, and `make`. It also includes two text editors, `vim` and `emacs`. If you’d like another text editor included in the image, please let us know.
-
-Make sure that you regularly pull before running. We may update the container as the class goes on and pulling ensures you’ll have the most up-to-date environment when developing.
 
 ## Development
 
@@ -73,6 +76,4 @@ While the details of running docker containers are unnecessary for this course, 
 ## Useful Docker commands
 
 * `docker container prune` Each `docker run` creates a new container, it will stop when you exit. Some time it is useful to prune all stopped containers by running `docker container prune` to gain some space. 
-
-
 
