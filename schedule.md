@@ -22,7 +22,7 @@ _Schedule is tentative and topics may change depending on interest and discussio
 |------------------|----------|--------|----------------|-
 | Thurs, Oct. 6    | abstract syntax trees and type inference     |        | EAC Chapter 5 
 | Tues, Oct. 11    | 3 address code and local value numbering     |        | EAC Chapter 8 (up to 8.5)
-| Thurs, Oct. 13   | data flow analysis                           |        | EAC Chapter 8.5 and Chapter 9 (up to 9.3); homework 1 due. homework 2 assigned
+| Thurs, Oct. 13   | data flow analysis                           |        | EAC Chapter 8.5 and Chapter 9 (up to 9.3) | homework 1 due. homework 2 assigned
 | Tues, Oct. 18    | static single-assignment (SSA) form          |        | EAC Chapter 9.3 (through end) | 
 | Thurs, Oct. 20   | backends                                     |        | Dragon Book Chapter 10 and 11 | 
 
