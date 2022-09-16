@@ -1,62 +1,62 @@
 ---
-title: "Schedule"
-layout: splash
+layout: single
+classes: wide
 ---
 
-_I will strive to get slides uploaded before lecture_
+_Slides will be uploaded the day after class_
 
-_Unless explicitly mentioned, Readings will refer to Engineering a Compiler (EAC), see the references [page](https://sorensenucsc.github.io/CSE110A-sp2022/references.html)_
+_Schedule is tentative and topics may change depending on interest and discussions_
 
-### Module 1: Lexing
+### Module 1: Parsing Overview/Refresher
 
-| Date             | Topic    | Slides |   Readings
-|------------------|----------|--------|----------------
-| Mon, March 28    | Welcome!  |  [slides](lectures/CSE110A_sp2022.pdf)   | [Overview page](https://sorensenucsc.github.io/CSE110A-sp2022/overview.html)
-| Wed, March 30    | Introduction to Compilers |  slides [pdf](lectures/CSE110AMarch30_sp2022.pdf) [pptx](lectures/CSE110AMarch30_sp2022.pptx)  | EAC Chapter 1
-| Fri, April 1     | Introduction to Lexical Analysis  | slides [pdf](lectures/CSE110AApril1_sp2022.pdf) [pptx](lectures/CSE110AApril1_sp2022.pptx)   |
-| Mon, April 4     |  Regular Expressions | slides [pdf](lectures/CSE110AApril4_sp2022.pdf) [pptx](lectures/CSE110AApril4_sp2022.pptx)  | 
-| Wed, April 6     |  Implementing Scanners with REs | slides [pdf](lectures/CSE110AApril6_sp2022.pdf) [pptx](lectures/CSE110AApril6_sp2022.pptx)| 
-| Fri, April 8     |  Token Actions and PLY | slides [pdf](lectures/CSE110AApril8_sp2022.pdf) [pptx](lectures/CSE110AApril8_sp2022.pptx) | 
+| Date             | Topic    | Slides |   Reading |  Notes 
+|------------------|----------|--------|----------------|-
+| Thurs, Sept. 22  |  introduction and tokenizing          |        | EAC Chapter 1 and 2 | 
+| Tues, Sept. 27   |  parsing and ambiguity                |        | EAC Chapter 3 |
+| Thurs, Sept. 29  |  symbol tables and parser generators  |        | [PLY docs](https://www.dabeaz.com/ply/) | homework 1 assigned
+| Tues, Oct. 4     |  parsing with derivatives             |        | parsing with derivatives [paper](https://www.ccs.neu.edu/home/turon/re-deriv.pdf) (first 7 pages)
 
-### Module 2: Parsing
+### Module 2: Analysis and optimization
 
-| Date             | Topic    | Slides |   Readings
-|------------------|----------|--------|----------------
-| Mon, April 11     | CFGS and Derivations | slides [pdf](lectures/CSE110AApril11_sp2022.pdf) [pptx](lectures/CSE110AApril11_sp2022.pptx) | EAC Chapter 3.2
-| Wed, April 13     |  Parse Trees and ambiguous grammars   | slides [pdf](lectures/CSE110AApril13_sp2022.pdf) [pptx](lectures/CSE110AApril13_sp2022.pptx) | EAC Chapter 3.2
-| Fri, April 15     | Associativity and top-down parsing   | slides [pdf](lectures/CSE110AApril15_sp2022.pdf) [pptx](lectures/CSE110AApril15_sp2022.pptx)  | EAC Chapter 3.3 (first half)
-| Mon, April 18     | Left recursion and lookahead in parsing    | slides [pdf](lectures/CSE110AApril18_sp2022.pdf) [pptx](lectures/CSE110AApril18_sp2022.pptx)  | EAC Chapter 3.3 (first half)
-| Wed, April 20     | Recursive descent parsers and symbol tables   | slides [pdf](lectures/CSE110AApril20_sp2022.pdf) [pptx](lectures/CSE110AApril20_sp2022.pptx)  | EAC Chapter 3.3 (second half)
-| Fri, April 22     | Symbol Tables and parser generators | slides [pdf](lectures/CSE110AApril22_sp2022.pdf) [pptx](lectures/CSE110AApril22_sp2022.pptx)  | [ply documentation](https://www.dabeaz.com/ply/ply.html)
+| Date             | Topic    | Slides | Reading | Notes
+|------------------|----------|--------|----------------|-
+| Thurs, Oct. 6    | abstract syntax trees and type inference     |        | EAC Chapter 5 
+| Tues, Oct. 11    | 3 address code and local value numbering     |        | EAC Chapter 8 (up to 8.5)
+| Thurs, Oct. 13   | data flow analysis                           |        | EAC Chapter 8.5 and Chapter 9 (up to 9.3); homework 1 due. homework 2 assigned
+| Tues, Oct. 18    | static single-assignment (SSA) form          |        | EAC Chapter 9.3 (through end) | 
+| Thurs, Oct. 20   | backends                                     |        | Dragon Book Chapter 10 and 11 | 
 
 
-### Module 3: Intermediate representations
+### Module 3: Parallelization and DSLs
 
-| Date             | Topic    | Slides |   Readings
-|------------------|----------|--------|----------------
-| Mon, April 25      | CLASS CANCELED | |
-| Wed, April 27      | Intro to IRs and ASTs | slides [pdf](lectures/CSE110AApril27_sp2022.pdf) [pptx](lectures/CSE110AApril27_sp2022.pptx) |EAC Chapter 5.1
-| Fri, April 29      | ASTs and type checking | slides [pdf](lectures/CSE110AApril29_sp2022.pdf) [pptx](lectures/CSE110AApril29_sp2022.pptx) | EAC Chapter 4.2
-| Mon, May 2     | ASTs and type checking 2  |slides [pdf](lectures/CSE110AMay2_sp2022.pdf) [pptx](lectures/CSE110AMay2_sp2022.pptx) | EAC Chapter 4.2
-| Wed, May 4     | ASTs and type checking 3 | slides [pdf](lectures/CSE110AMay4_sp2022.pdf) [pptx](lectures/CSE110AMay4_sp2022.pptx) | EAC Chapter 5.3
-| Fri, May 6     | Converting ASTs into 3 address code |slides [pdf](lectures/CSE110AMay6_sp2022.pdf) [pptx](lectures/CSE110AMay6_sp2022.pptx) | EAC Chapter 5.3
-| Mon, May 9     | Converting statements into 3 address code |slides [pdf](lectures/CSE110AMay9_sp2022.pdf) [pptx](lectures/CSE110AMay9_sp2022.pptx) | EAC Chapter 5.3
+| Date             | Topic    | Slides |  Readings | Notes
+|------------------|----------|--------|----------------|-
+| Tues, Oct. 25    | instruction level parallelism (ILP) and Do-all loops |      | Dragon Book Chapter 10 and 11 | 
+| Thurs, Oct. 27   | parallel schedules  and halide                       |      | [Halide](http://people.csail.mit.edu/jrk/halide-pldi13.pdf) | homework 2 due, homework 3 assigned
+| Tues, Nov. 1     | graph processing                                     |      | [IrGL](https://cs.rochester.edu/~sree/papers/sree-oopsla2016.pdf)  | homework 2 due, homework 3 assigned 
+| Thurs, Nov. 3    | relaxed memory models           |      | slides |  
+| Tues, Nov. 8     | decoupled access/execute        |                | [DAE paper](https://courses.cs.washington.edu/courses/cse590g/04sp/Smith-1982-Decoupled-Access-Execute-Computer-Architectures.pdf) | 
 
-### Module 4: Optimizations
 
-| Date             | Topic    | Slides |   Readings
-|------------------|----------|--------|----------------
-| Wed, May 11      | HW 3 overview and intro to optimizations        | slides [pdf](lectures/CSE110AMay11_sp2022.pdf) [pptx](lectures/CSE110AMay11_sp2022.pptx) | EAC Chapter 8.1
-| Fri, May 13     | Optimization overview | slides [pdf](lectures/CSE110AMay13_sp2022.pdf) [pptx](lectures/CSE110AMay13_sp2022.pptx) | EAC Chapter 8.1
-| Mon, May 16     | Basic blocks and local value numbering |  slides [pdf](lectures/CSE110AMay16_sp2022.pdf) [pptx](lectures/CSE110AMay16_sp2022.pptx) | EAC Chapter 8 (up to 8.5)
-| Wed, May 18     | Local value numbering 2 | slides [pdf](lectures/CSE110AMay18_sp2022.pdf) [pptx](lectures/CSE110AMay18_sp2022.pptx) | EAC Chapter 8 (up to 8.6)
-| Fri, May 20     | CLASS CANCELED | |
-| Mon, May 23     | Loop transforms | slides [pdf](lectures/CSE110AMay23_sp2022.pdf) [pptx](lectures/CSE110AMay23_sp2022.pptx)  | EAC Chapter 7.8
-| Wed, May 25     | Loop transforms 2 | slides [pdf](lectures/CSE110AMay25_sp2022.pdf) [pptx](lectures/CSE110AMay25_sp2022.pptx)  | EAC Chapter 7.8
-| Fri, May 27     | Loop transforms 3| slides [pdf](lectures/CSE110AMay27_sp2022.pdf) [pptx](lectures/CSE110AMay27_sp2022.pptx)|
-| Wed, June 1     | Control Flow Graphs | slides [pdf](lectures/CSE110AJune1_sp2022.pdf) [pptx](lectures/CSE110AJune1_sp2022.pptx) | EAC Chapter 8.6.1
-| Fri, June 3     | Live variable Analysis | slides [pdf](lectures/CSE110AJune3_sp2022.pdf) [pptx](lectures/CSE110AJune3_sp2022.pptx) | EAC Chapter 8.6.1
+## Module 4: Advanced topics
+
+| Date             | Topic    | Slides  | Readings | Notes
+|------------------|----------|--------|----------------|- 
+| Thurs, Nov. 10   | optimization impact      | |       | [Stabilizer](https://people.cs.umass.edu/~emery/pubs/stabilizer-asplos13.pdf) | homework 3 due, homework 4 assigned
+| Tues, Nov.15     | dynamic analysis         | |  TBD  |
+| Thurs. Nov. 17   | synthesis 1              | |  TBD  | Paper approved for paper reading
+| Tues. Nov. 22    | synthesis 2              | |  TBD  | 
+
+## Module 5: Final project and guest lecture
+
+| Date             | Topic    | Slides  | Readings | Notes
+|------------------|----------|--------|----------------|- 
+| Tues. Nov. 29   | guest lecture (TBD)          |      |  | 
+| Thurs. Dec. 1   | final project presentations  |      |  | homework 4 due. Paper review due
 
 ## Final
 
-Our final is scheduled for Tuesday, June 7. If you would like to block off specific hours, our scheduled time is 7:30 PM to 10:30 PM
+
+| Date             | Official time    | Provided time | Notes
+|------------------|----------|--------|----------------
+| Thursday Dec. 8     | 12 - 3 PM    | 8 AM - 8 PM      | Final project report due. 
