@@ -33,7 +33,7 @@ _Schedule is tentative and topics may change depending on interest and discussio
 |------------------|----------|--------|----------------|-
 | Tues, Oct. 25    | instruction level parallelism (ILP) and Do-all loops |      | Dragon Book Chapter 10 and 11 | 
 | Thurs, Oct. 27   | parallel schedules  and halide                       |      | [Halide](http://people.csail.mit.edu/jrk/halide-pldi13.pdf) | homework 2 due, homework 3 assigned
-| Tues, Nov. 1     | graph processing                                     |      | [IrGL](https://cs.rochester.edu/~sree/papers/sree-oopsla2016.pdf)  | homework 2 due, homework 3 assigned 
+| Tues, Nov. 1     | graph processing                                     |      | [IrGL](https://cs.rochester.edu/~sree/papers/sree-oopsla2016.pdf)  |
 | Thurs, Nov. 3    | relaxed memory models           |      | slides |  
 | Tues, Nov. 8     | decoupled access/execute        |                | [DAE paper](https://courses.cs.washington.edu/courses/cse590g/04sp/Smith-1982-Decoupled-Access-Execute-Computer-Architectures.pdf) | 
 
