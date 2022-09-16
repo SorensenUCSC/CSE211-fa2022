@@ -9,7 +9,7 @@ paginate_path: /page:num/
 
 repository: "SorensenUCSC/CSE211-fa2022"
 
-baseurl: "/CSE211-fa202"
+baseurl: "/CSE211-fa2022"
 
 plugins:
   - jekyll-feed
