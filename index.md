@@ -1,21 +1,19 @@
 ---
-title: "Fundamentals of Compiler Design"
+title: "Graduate Compiler Design"
 layout: single
 ---
 
 
-### Welcome to **CSE110A:** _Fundamentals of Compiler Design_, Spring 2022 Quarter at UCSC!
+### Welcome to **CSE211:** _Graduate Compiler Design_, Fall 2022 Quarter at UCSC!
 
 - **Instructor:** [Tyler Sorensen](https://users.soe.ucsc.edu/~tsorensen/)
-- **Time:** Mondays, Wednesdays and Fridays: 4:00 - 5:05 pm
-- **Location:** Soc Sci 2 - 71 (new classroom!)
+- **Time:** MWF 1:30 - 3:05 pm
+- **Location:** Porter 246 (_in person!_)
+- **Contact:** \<first name\>.\<last name\>@ucsc.edu
 
-Hello and welcome to the fundamentals of compiler design class! 
 
-In this class you will learn about compiler design and implementation. In the abstract, compilers explore many of the [foundational problems in computer science](https://en.wikipedia.org/wiki/Halting_problem). In practice, compilers are [massive pieces of well-oiled software](https://www.phoronix.com/scan.php?page=news_item&px=MTg3OTQ), and are some of the engineering marvels of the modern world. 
+Hello! I'm Tyler  and welcome to the graduate compiler design course! 
 
-_COVID Note_ : The last few years have been difficult due to the COVID pandemic. Public health concerns and policies remain volatile. The first priority in this class in your health and well-being. We will approach any challenges that arise with compassion and understanding. I expect that you will do the same, both to the teaching staff and to your classmates. We will follow university guidelines and work together to have a productive and fun quarter.
+In this class you will learn about advanced topics in compiler design and implementation. In the abstract, compilers explore many of the [foundational problems in computer science](https://en.wikipedia.org/wiki/Halting_problem). In practice, compilers are [massive pieces of well-oiled software](https://www.phoronix.com/scan.php?page=news_item&px=MTg3OTQ), and are some of the engineering marvels of the modern world. Given the end of Dennard's scaling, compilers will play an increasingly important role to achieve further computational gains. _The main focus of this class is how compilers can make your code more efficient and safe on modern (and near-future) processors_.
 
-That said, this class is scheduled to be _in person_. This is not an asynchronous class, and it is known that learning outcomes will suffer if you do not attend the synchronous lectures. I may post lectures online for extra study materials, but you should not expect them to be an equitable substitute for in-person attendence (e.g. they do not capture discussions well, and occasionaly the equiptment has errors). If your situation requires asynchronous courses, I suggest you contact an undergraduate adviser to discuss alternative options.
-
-This page is based on the webpage for UCSC's Fall 2020 CSE232 class. Thanks to [Professor Lindsey Kuper](https://users.soe.ucsc.edu/~lkuper/) for a great template!
+_Special Note for Fall 2022_: COVID continues to effect our lives in many different ways. There will likely be infections throughout the year (both as students and faculty). Additionally, we will all have to adjust as we work together to a create an environment where everyone feels valued and safe. The pandemic has been difficult for people in different ways and there will surely be new challenges throughout the quarter. We will work together to overcome them and make this a productive and engaging class. That said, this class is designed to be _in person_. If you do not plan make a majority of the lectures in person, then I would recommend reaching out to a graduate adviser to find a class more suitable to your constraints. Please see the COVID policy in the [overview](overview.html) and email me if you have any questions or comments. 
