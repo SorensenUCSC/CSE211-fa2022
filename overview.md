@@ -126,17 +126,17 @@ The review should roughly be 4 pages double spaced. Please organize it as follow
 - **Illustrative example:** find a small example that you can clearly explain, especially related to the compiler component. This might be a small program and a description of how the compiler transforms the program.
 - **Key results:** what are the important results of this paper and how did the compiler enable them?
 
-Please pre-approve the paper with me. Additionally, I can suggest papers. The reports will be due two weeks before the quarter ends. Dates for the paper assignment are summarized [here](homeworks.html#paper-assignments-and-final-projects).
+Please pre-approve the paper with me. Additionally, I can suggest papers. You will need to have your paper approved two weeks before the quarter ends. The report will be due on the day of the final. Dates for the paper assignment are summarized [here](schedule.html#paper-assignments-and-final-projects).
 
 A list of papers can be found [here](https://docs.google.com/spreadsheets/d/1C5zMXC_RC94EmgmJVOliwYLylEyDUmK9KCO8oixaC3k/edit?usp=sharing). Please feel free to propose new papers. Even if you select from the list, you will still need to get the paper approved. 
 
 ## Final Project
 
-You can substitute the final exam for a final project. The project will need to be pre-approved by me no later than 2 weeks before the end of the semester (preferably earlier). To propose a project, please write a 1 page summary clearly describing the compiler element to the project and how it relates to what we are learning.
+You can substitute the final exam for a final project. The project will need to be pre-approved by me no later than 2 weeks before the end of the semester (preferably earlier). To propose a project, please write a two or three paragraphs clearly describing the compiler element to the project and how it relates to what we are learning. 
 
-Your final project deliverable will be a 6 page double spaced report detailing your project with an emphasis on the compiler aspects of your project. Think of it like a mini conference paper, with a
-required "compiler design and implementation" section. I expect this section will be roughly 2 pages of your report. You will also be required to give a 15 minute presentation about your final project to
-the class. Dates for the final project are summarized [here](homeworks.html#paper-assignments-and-final-projects).
+You will need to get your project approved two weeks before the last day of class. Because of that, you will need to submit your proposal at least 2 days before then. However, I encourage you to discuss your final project ideas with me starting as early as possible.
+
+Your final project deliverable will be a 6 page double spaced report detailing your project with an emphasis on the compiler aspects of your project. Think of it like a mini conference paper, with a required "compiler design and implementation" section. I expect this section will be roughly 2 pages of your report. You will also be required to give a 15 minute presentation about your final project on the last day of class. Dates for the final project are summarized [here](schedule.html#paper-assignments-and-final-projects).
 
 If you are a PhD student, I strongly recommend thinking about a final project related to your thesis.
 
