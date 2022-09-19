@@ -21,19 +21,19 @@ _Schedule is tentative and topics may change depending on interest and discussio
 | Date             | Topic    | Slides | Reading | Notes
 |------------------|----------|--------|----------------|-
 | Thurs, Oct. 6    | abstract syntax trees and type inference     |        | EAC Chapter 5 
-| Tues, Oct. 11    | 3 address code and local value numbering     |        | EAC Chapter 8 (up to 8.5)
+| Tues, Oct. 11    | 3 address code and local value numbering     |        | EAC Chapter 8 (up to 8.5) | Tyler gone, lecture will be recorded
 | Thurs, Oct. 13   | data flow analysis                           |        | EAC Chapter 8.5 and Chapter 9 (up to 9.3) | homework 1 due. homework 2 assigned
 | Tues, Oct. 18    | static single-assignment (SSA) form          |        | EAC Chapter 9.3 (through end) | 
-| Thurs, Oct. 20   | backends                                     |        | Dragon Book Chapter 10 and 11 | 
+| Thurs, Oct. 20   | backends                                     |        | Dragon Book Chapter 10 and 11 | Tyler gone, lecture will be recorded
 
 
 ### Module 3: Parallelization and DSLs
 
 | Date             | Topic    | Slides |  Readings | Notes
 |------------------|----------|--------|----------------|-
-| Tues, Oct. 25    | instruction level parallelism (ILP) and Do-all loops |      | Dragon Book Chapter 10 and 11 | 
+| Tues, Oct. 25    | instruction level parallelism (ILP) and Do-all loops |      | Dragon Book Chapter 10 and 11 | Midterm assigned
 | Thurs, Oct. 27   | parallel schedules  and halide                       |      | [Halide](http://people.csail.mit.edu/jrk/halide-pldi13.pdf) | homework 2 due, homework 3 assigned
-| Tues, Nov. 1     | graph processing                |                    | [IrGL](https://cs.rochester.edu/~sree/papers/sree-oopsla2016.pdf)  |
+| Tues, Nov. 1     | graph processing                |                    | [IrGL](https://cs.rochester.edu/~sree/papers/sree-oopsla2016.pdf)  | Midterm due
 | Thurs, Nov. 3    | relaxed memory models           |                    | slides |  
 | Tues, Nov. 8     | decoupled access/execute        |                    | [DAE paper](https://courses.cs.washington.edu/courses/cse590g/04sp/Smith-1982-Decoupled-Access-Execute-Computer-Architectures.pdf) | 
 
