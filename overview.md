@@ -138,7 +138,13 @@ You will need to get your project approved two weeks before the last day of clas
 
 Your final project deliverable will be a 6 page double spaced report detailing your project with an emphasis on the compiler aspects of your project. Think of it like a mini conference paper, with a required "compiler design and implementation" section. I expect this section will be roughly 2 pages of your report. You will also be required to give a 15 minute presentation about your final project on the last day of class. Dates for the final project are summarized [here](schedule.html#paper-assignments-and-final-projects).
 
+Instead of the paper, if you'd like to publicly show off your project, you can instead choose to submit a website report (in markdown). I will host the projects on the website and brag about them on twitter :) It is completely optional to host your final project publicly, but if you do not host your project publicly then you will need to submit a pdf report (i.e. the website report is not available). 
+
+You can see some examples of final projects [here](https://sorensenucsc.github.io/CSE211-fa2021/projects.html).
+
+
 If you are a PhD student, I strongly recommend thinking about a final project related to your thesis.
+
 
 ## Grade Breakdown
 
