@@ -33,9 +33,9 @@ _Schedule is tentative and topics may change depending on interest and discussio
 |------------------|----------|--------|----------------|-
 | Tues, Oct. 25    | instruction level parallelism (ILP) and Do-all loops |      | Dragon Book Chapter 10 and 11 | 
 | Thurs, Oct. 27   | parallel schedules  and halide                       |      | [Halide](http://people.csail.mit.edu/jrk/halide-pldi13.pdf) | homework 2 due, homework 3 assigned
-| Tues, Nov. 1     | graph processing                                     |      | [IrGL](https://cs.rochester.edu/~sree/papers/sree-oopsla2016.pdf)  |
-| Thurs, Nov. 3    | relaxed memory models           |      | slides |  
-| Tues, Nov. 8     | decoupled access/execute        |                | [DAE paper](https://courses.cs.washington.edu/courses/cse590g/04sp/Smith-1982-Decoupled-Access-Execute-Computer-Architectures.pdf) | 
+| Tues, Nov. 1     | graph processing                |                    | [IrGL](https://cs.rochester.edu/~sree/papers/sree-oopsla2016.pdf)  |
+| Thurs, Nov. 3    | relaxed memory models           |                    | slides |  
+| Tues, Nov. 8     | decoupled access/execute        |                    | [DAE paper](https://courses.cs.washington.edu/courses/cse590g/04sp/Smith-1982-Decoupled-Access-Execute-Computer-Architectures.pdf) | 
 
 
 ## Module 4: Advanced topics
@@ -43,8 +43,8 @@ _Schedule is tentative and topics may change depending on interest and discussio
 | Date             | Topic    | Slides  | Readings | Notes
 |------------------|----------|--------|----------------|- 
 | Thurs, Nov. 10   | optimization impact      | |       | [Stabilizer](https://people.cs.umass.edu/~emery/pubs/stabilizer-asplos13.pdf) | homework 3 due, homework 4 assigned
-| Tues, Nov.15     | dynamic analysis         | |  TBD  |
-| Thurs. Nov. 17   | synthesis 1              | |  TBD  | Paper approved for paper reading
+| Tues, Nov.15     | dynamic analysis         | |  TBD  | Paper/project sumbitted for approval
+| Thurs. Nov. 17   | synthesis 1              | |  TBD  | 
 | Tues. Nov. 22    | synthesis 2              | |  TBD  | 
 
 ## Module 5: Final project and guest lecture
@@ -52,11 +52,47 @@ _Schedule is tentative and topics may change depending on interest and discussio
 | Date             | Topic    | Slides  | Readings | Notes
 |------------------|----------|--------|----------------|- 
 | Tues. Nov. 29   | guest lecture (TBD)          |      |  | 
-| Thurs. Dec. 1   | final project presentations  |      |  | homework 4 due. Paper review due
+| Thurs. Dec. 1   | final project presentations  |      |  | homework 4 due. 
 
 ## Final
 
 
 | Date             | Official time    | Provided time | Notes
 |------------------|----------|--------|----------------
-| Thursday Dec. 8     | 12 - 3 PM    | 8 AM - 8 PM      | Final project report due. 
+| Thursday Dec. 8     | 12 - 3 PM    | 8 AM - 8 PM      | Final project report due, paper review due
+
+
+# Paper Assignments and Final Projects
+
+Please see [here](overview.html#paper-assignment) for an overview of the paper assignment
+
+Please see [here](overview.html#final-project) for a description of the optional final project
+
+## Dates Summary:
+
+Paper/Project proposals submitted (latest possible, preferably earlier): Nov. 15
+
+Paper/Projects need to be approved by Nov. 17
+
+Project presentation should be ready by due Dec. 1
+
+Paper review due Dec. 8
+
+Project report due Dec. 8
+
+
+## Dates Explained
+
+All paper assignments and final projects must be approved 2 weeks before the last day of class: Nov. 17.
+
+Please make sure you have submitted your proposal by Nov. 15.
+
+For a paper assignment, a proposal is the paper title and a few sentences about why it is interesting for this class. Another option is to ask for a paper. In that case, please provide a few sentences about what you have found interesting in the class so far.
+
+For a final project, it is a two paragraphs describing the compiler element to the project and how it relates to what we are learning. You can submit this on Piazza.
+
+It is not guaranteed that your proposal will be approved! Please submit your proposals as early as possible so that we can ensure they get approved!
+
+For projects: a presentation will be due on Dec 1, so that we can schedule the presentation.
+
+For paper reviews and projects: the report is due the day of the final: Dec. 8.
