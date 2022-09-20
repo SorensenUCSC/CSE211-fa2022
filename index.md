@@ -7,7 +7,7 @@ layout: single
 ### Welcome to **CSE211:** _Graduate Compiler Design_, Fall 2022 Quarter at UCSC!
 
 - **Instructor:** [Tyler Sorensen](https://users.soe.ucsc.edu/~tsorensen/)
-- **Time:** MWF 1:30 - 3:05 pm
+- **Time:** Tues/Thurs 1:30 - 3:05 pm
 - **Location:** Porter 246 (_in person!_)
 - **Contact:** \<first name\>.\<last name\>@ucsc.edu
 
