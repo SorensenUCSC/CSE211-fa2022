@@ -15,7 +15,7 @@ I will not require you to purchase any textbook for this class. However, I will 
 
 The first two modules will draw heavily from [Engineering: A Compiler](https://www.amazon.com/Engineering-Compiler-Keith-Cooper/dp/012088478X) (2011) and the classic [Dragon Book](https://www.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811#ace-g6796040015) (2006).
 
-The university library has online copies of EAC available. Here is a link to the course reserve: [link](https://ucsc.primo.exlibrisgroup.com/permalink/01CDL_SCR_INST/epaiir/alma991025089207404876)
+The university library has online copies of EAC available. Here is a link to the course reserve: [link](https://ucsc.primo.exlibrisgroup.com/permalink/01CDL_SCR_INST/1jiojor/alma9914646210706531)
 
 If you are interested in the dragon book, let me know and you can borrow my copy.
 
