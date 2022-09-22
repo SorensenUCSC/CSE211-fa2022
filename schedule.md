@@ -43,7 +43,7 @@ _Schedule is tentative and topics may change depending on interest and discussio
 | Date             | Topic    | Slides  | Readings | Notes
 |------------------|----------|--------|----------------|- 
 | Thurs, Nov. 10   | optimization impact      | |       | [Stabilizer](https://people.cs.umass.edu/~emery/pubs/stabilizer-asplos13.pdf) | homework 3 due, homework 4 assigned
-| Tues, Nov.15     | dynamic analysis         | |  TBD  | Paper/project sumbitted for approval
+| Tues, Nov.15     | dynamic analysis         | |  TBD  |  | Paper/project sumbitted for approval
 | Thurs. Nov. 17   | synthesis 1              | |  TBD  | 
 | Tues. Nov. 22    | synthesis 2              | |  TBD  | 
 
