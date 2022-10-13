@@ -24,10 +24,9 @@ _dates will be modified to adjust for extra time spent on earlier modules._
 
 | Date             | Topic    | Slides | Reading | Notes
 |------------------|----------|--------|----------------|-
-| Thurs, Oct. 6    | abstract syntax trees and type inference     |        | EAC Chapter 5 
 | Tues, Oct. 11    | 3 address code and local value numbering     |        | EAC Chapter 8 (up to 8.5) | Tyler gone, lecture will be recorded
-| Thurs, Oct. 13   | data flow analysis                           |        | EAC Chapter 8.5 and Chapter 9 (up to 9.3) | homework 1 due. homework 2 assigned
-| Tues, Oct. 18    | static single-assignment (SSA) form          |        | EAC Chapter 9.3 (through end) | 
+| Thurs, Oct. 13   | data flow analysis                           |   [slides](lectures/CSE211Oct13_fa2022.pdf)       | EAC Chapter 8.5 and Chapter 9 (up to 9.3) | assigned
+| Tues, Oct. 18    | static single-assignment (SSA) form          |        | EAC Chapter 9.3 (through end) | homework 1 due. homework 2 
 | Thurs, Oct. 20   | backends                                     |        | Dragon Book Chapter 10 and 11 | Tyler gone, lecture will be recorded
 
 
