@@ -26,7 +26,7 @@ _dates will be modified to adjust for extra time spent on earlier modules._
 |------------------|----------|--------|----------------|-
 | Tues, Oct. 11    | 3 address code and local value numbering     |        | EAC Chapter 8 (up to 8.5) | Tyler gone, lecture will be recorded
 | Thurs, Oct. 13   | Regional optimizations                           |   [slides](lectures/CSE211Oct13_fa2022.pdf)       | EAC Chapter 8.5 and Chapter 9 (up to 9.3) | 
-| Tues, Oct. 18    |         |    [slides](lectures/CSE211Oct22_fa2022.pdf)     | EAC Chapter 8.5 and Chapter 9 (up to 9.3) | homework 1 due. homework 2 assigned
+| Tues, Oct. 18    |         |    [slides](lectures/CSE211Oct18_fa2022.pdf)     | EAC Chapter 8.5 and Chapter 9 (up to 9.3) | homework 1 due. homework 2 assigned
 | Thurs, Oct. 20   | static single-assignment (SSA) form                       |        | EAC Chapter 9.3 (through end) | Tyler gone, lecture will be recorded
 
 
