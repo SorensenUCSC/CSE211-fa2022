@@ -35,8 +35,8 @@ _dates will be modified to adjust for extra time spent on earlier modules._
 | Date             | Topic    | Slides |  Readings | Notes
 |------------------|----------|--------|----------------|-
 | Tues, Oct. 25    | instruction level parallelism (ILP) and Do-all loops |      | Dragon Book Chapter 10 and 11 | Midterm assigned
-| Thurs, Oct. 27   | parallel schedules  and halide                       |      | [Halide](http://people.csail.mit.edu/jrk/halide-pldi13.pdf) | homework 2 due, homework 3 assigned
-| Tues, Nov. 1     | graph processing                |                    | [IrGL](https://cs.rochester.edu/~sree/papers/sree-oopsla2016.pdf)  | Midterm due
+| Thurs, Oct. 27   | parallel schedules  and halide                       |      | [Halide](http://people.csail.mit.edu/jrk/halide-pldi13.pdf) | 
+| Tues, Nov. 1     | graph processing                |                    | [IrGL](https://cs.rochester.edu/~sree/papers/sree-oopsla2016.pdf)  | Midterm Due. Homework 2 Due and homework 3 assigned (Nov 2)  
 | Thurs, Nov. 3    | relaxed memory models           |                    | slides |  
 | Tues, Nov. 8     | decoupled access/execute        |                    | [DAE paper](https://courses.cs.washington.edu/courses/cse590g/04sp/Smith-1982-Decoupled-Access-Execute-Computer-Architectures.pdf) | 
 
