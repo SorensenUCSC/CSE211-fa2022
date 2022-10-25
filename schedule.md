@@ -28,13 +28,14 @@ _dates will be modified to adjust for extra time spent on earlier modules._
 | Thurs, Oct. 13   | Regional optimizations                           |   [slides](lectures/CSE211Oct13_fa2022.pdf)       | EAC Chapter 8.5 and Chapter 9 (up to 9.3) | 
 | Tues, Oct. 18    |         |    [slides](lectures/CSE211Oct18_fa2022.pdf)     | EAC Chapter 8.5 and Chapter 9 (up to 9.3) | homework 1 due. homework 2 assigned
 | Thurs, Oct. 20   | static single-assignment (SSA) form                       |    [slides](lectures/CSE211Oct20_fa2022.pdf)      | EAC Chapter 9.3 (through end) | Tyler gone, lecture will be recorded
+| Tues, Oct. 25    | SSA optimizations |  [slides](lectures/CSE211Oct25_fa2022.pdf)     | EAC Chapter 9.3 - 9.5  | 
+
 
 
 ### Module 3: Parallelization and DSLs
 
 | Date             | Topic    | Slides |  Readings | Notes
 |------------------|----------|--------|----------------|-
-| Tues, Oct. 25    | instruction level parallelism (ILP) and Do-all loops |      | Dragon Book Chapter 10 and 11 | Midterm assigned
 | Thurs, Oct. 27   | parallel schedules  and halide                       |      | [Halide](http://people.csail.mit.edu/jrk/halide-pldi13.pdf) | 
 | Tues, Nov. 1     | graph processing                |                    | [IrGL](https://cs.rochester.edu/~sree/papers/sree-oopsla2016.pdf)  | Midterm Due. Homework 2 Due and homework 3 assigned (Nov 2)  
 | Thurs, Nov. 3    | relaxed memory models           |                    | slides |  
