@@ -36,17 +36,18 @@ _dates will be modified to adjust for extra time spent on earlier modules._
 
 | Date             | Topic    | Slides |  Readings | Notes
 |------------------|----------|--------|----------------|-
-| Thurs, Oct. 27   | parallel schedules  and halide                       |      | [Halide](http://people.csail.mit.edu/jrk/halide-pldi13.pdf) | 
-| Tues, Nov. 1     | graph processing                |                    | [IrGL](https://cs.rochester.edu/~sree/papers/sree-oopsla2016.pdf)  | Midterm Due. Homework 2 Due and homework 3 assigned (Nov 2)  
-| Thurs, Nov. 3    | relaxed memory models           |                    | slides |  
-| Tues, Nov. 8     | decoupled access/execute        |                    | [DAE paper](https://courses.cs.washington.edu/courses/cse590g/04sp/Smith-1982-Decoupled-Access-Execute-Computer-Architectures.pdf) | 
+| Thurs, Oct. 27   | Instruction level parallelism |  [slides](lectures/CSE211Oct27_fa2022.pdf) | slides
+| Tues, Nov. 1     | parallel schedules  and halide                       |      | [Halide](http://people.csail.mit.edu/jrk/halide-pldi13.pdf) | 
+| Thurs, Nov. 3    | graph processing                |                    | [IrGL](https://cs.rochester.edu/~sree/papers/sree-oopsla2016.pdf)  | 
+| Tues, Nov. 8     | relaxed memory models           |                    | slides |  
+| Thurs, Nov. 10   | decoupled access/execute        |                    | [DAE paper](https://courses.cs.washington.edu/courses/cse590g/04sp/Smith-1982-Decoupled-Access-Execute-Computer-Architectures.pdf) | 
 
 
 ## Module 4: Advanced topics
 
 | Date             | Topic    | Slides  | Readings | Notes
 |------------------|----------|--------|----------------|- 
-| Thurs, Nov. 10   | optimization impact      | |       | [Stabilizer](https://people.cs.umass.edu/~emery/pubs/stabilizer-asplos13.pdf) | homework 3 due, homework 4 assigned
+| Thurs, Nov. 10   | optimization impact      | |       | [Stabilizer](https://people.cs.umass.edu/~emery/pubs/stabilizer-asplos13.pdf) | 
 | Tues, Nov.15     | dynamic analysis         | |  TBD  |  | Paper/project sumbitted for approval
 | Thurs. Nov. 17   | synthesis 1              | |  TBD  | 
 | Tues. Nov. 22    | synthesis 2              | |  TBD  | 
