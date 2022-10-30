@@ -10,7 +10,7 @@ In order for your homeworks to be graded, they must run on the docker. We will u
 
 **Please make sure you understand the storage model of Docker as not all storage is persistant! It is always a good idea to back up your work in progress, e.g., using git. But please don't make your homework git repos public!**
 
-_Thanks to Yanwen Xu for setting up the docker and writing the instructons!_
+_This write up has been contributed to by several students: Reese Levine, Yanwen Xu, and Neal Chokshi; please let me know if you have any other suggestions!_
 
 ------
 
@@ -32,7 +32,7 @@ When running, the container includes everything necessary for the homework to wo
 
 Homework skeletons will be available to download using `wget`. Download the homework and `unzip` it. You can either work on your code outside the container, using a text editor or IDE of your preference, or you can work on your code inside the container using a terminal based text editor like vim or emacs.
 
-VSCode is highly recommended editor for developing within docker given it's [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension. This allows you to hook into the docker environment within VSCode, letting you access files and the terminal just as you would on your host system.
+There is good support using VSCode with docker given it's [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension. This allows you to hook into the docker environment within VSCode, letting you access files and the terminal just as you would on your host system.
 
 When you’re ready to start the container **make sure you’re in the top level homework directory** (for example, for homework 1 your current directory should be “homework1_packet”, or wherever you extracted the code to). `pwd` should return something ending with `/homeworkX_packet`. When you mount this directory within docker the permissions will change, so make sure you aren't in a directory that you don't want to lose access to. Once you are ready, run the following command depends on your system:
 
