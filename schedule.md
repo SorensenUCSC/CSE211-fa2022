@@ -37,8 +37,8 @@ _dates will be modified to adjust for extra time spent on earlier modules._
 | Date             | Topic    | Slides |  Readings | Notes
 |------------------|----------|--------|----------------|-
 | Thurs, Oct. 27   | Instruction level parallelism |  [slides](lectures/CSE211Oct27_fa2022.pdf) | slides
-| Tues, Nov. 1     | parallel schedules  and halide                       |      | [Halide](http://people.csail.mit.edu/jrk/halide-pldi13.pdf) | 
-| Thurs, Nov. 3    | graph processing                |                    | [IrGL](https://cs.rochester.edu/~sree/papers/sree-oopsla2016.pdf)  | 
+| Tues, Nov. 1     | parallel for loops                       |   [slides](lectures/CSE211Nov1_fa2022.pdf)    | [Halide](http://people.csail.mit.edu/jrk/halide-pldi13.pdf) | 
+| Thurs, Nov. 3    | parallel schedules and Halide                |                    | [Halide] | 
 | Tues, Nov. 8     | relaxed memory models           |                    | slides |  
 | Thurs, Nov. 10   | decoupled access/execute        |                    | [DAE paper](https://courses.cs.washington.edu/courses/cse590g/04sp/Smith-1982-Decoupled-Access-Execute-Computer-Architectures.pdf) | 
 
