@@ -50,17 +50,10 @@ _dates will be modified to adjust for extra time spent on earlier modules._
 
 | Date             | Topic    | Slides  | Readings | Notes
 |------------------|----------|--------|----------------|- 
-| Thurs, Nov. 10   | optimization impact      | |       | [Stabilizer](https://people.cs.umass.edu/~emery/pubs/stabilizer-asplos13.pdf) | 
-| Tues, Nov.15     | dynamic analysis         | |  TBD  |  | Paper/project submitted for approval
-| Thurs. Nov. 17   | synthesis 1              | |  TBD  | 
-| Tues. Nov. 22    | synthesis 2              | |  TBD  | 
-
-## Module 5: Final project and guest lecture
-
-| Date             | Topic    | Slides  | Readings | Notes
-|------------------|----------|--------|----------------|- 
+| Tues. Nov. 22   | optimization impact      | |       | [Stabilizer](https://people.cs.umass.edu/~emery/pubs/stabilizer-asplos13.pdf) | 
 | Tues. Nov. 29   | guest lecture (TBD)          |      |  | 
-| Thurs. Dec. 1   | final project presentations  |      |  | homework 4 due. 
+| Thurs. Dec. 1   | final project presentations  |      |  | 
+
 
 ## Final
 
