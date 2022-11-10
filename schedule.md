@@ -40,7 +40,7 @@ _dates will be modified to adjust for extra time spent on earlier modules._
 | Tues, Nov. 1     | parallel for loops                       |   [slides](lectures/CSE211Nov1_fa2022.pdf)    | slides | 
 | Thurs, Nov. 3    | implementing parallel for loops           |    [slides](lectures/CSE211Nov3_fa2022.pdf)                | slides |
 | Tues, Nov. 8     | parallel loop restructuring and Halide        |  [slides](lectures/CSE211Nov8_fa2022.pdf)                  | [Halide](http://people.csail.mit.edu/jrk/halide-pldi13.pdf) | Homework 3 assigned (Nov. 7) |  
-| Thurs, Nov. 10     | compiling relaxed memory models           |                    | slides |  
+| Thurs, Nov. 10     | Halide          |    [slides](lectures/CSE211Nov10_fa2022.pdf)                  | slides |  
 | Tues, Nov. 15    | graph DSLs                                   |                   | [irgl](https://cs.rochester.edu/~sree/papers/sree-oopsla2016.pdf)       | 
 | Thurs, Nov. 17   | decoupled access/execute        |                    | [DAE paper](https://courses.cs.washington.edu/courses/cse590g/04sp/Smith-1982-Decoupled-Access-Execute-Computer-Architectures.pdf) | 
 
