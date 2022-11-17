@@ -42,7 +42,8 @@ _dates will be modified to adjust for extra time spent on earlier modules._
 | Tues, Nov. 8     | parallel loop restructuring and Halide        |  [slides](lectures/CSE211Nov8_fa2022.pdf)                  | [Halide](http://people.csail.mit.edu/jrk/halide-pldi13.pdf) | Homework 3 assigned (Nov. 7) |  
 | Thurs, Nov. 10     | Halide          |    [slides](lectures/CSE211Nov10_fa2022.pdf)                  | slides |  
 | Tues, Nov. 15    | graph DSLs                                   |   [slides](lectures/irgl.pdf)                 | [irgl](https://cs.rochester.edu/~sree/papers/sree-oopsla2016.pdf)       | 
-| Thurs, Nov. 17   | decoupled access/execute        |                    | [DAE paper](https://courses.cs.washington.edu/courses/cse590g/04sp/Smith-1982-Decoupled-Access-Execute-Computer-Architectures.pdf) | 
+| Thurs, Nov. 17   | compiling relaxed memory models        |      [slides](lectures/CSE211Nov17_fa2022.pdf)                 | slides| 
+| Tues, Nov. 22   | decoupled access/execute        |                    | [DAE paper](https://courses.cs.washington.edu/courses/cse590g/04sp/Smith-1982-Decoupled-Access-Execute-Computer-Architectures.pdf) | 
 
 
 
@@ -50,7 +51,6 @@ _dates will be modified to adjust for extra time spent on earlier modules._
 
 | Date             | Topic    | Slides  | Readings | Notes
 |------------------|----------|--------|----------------|- 
-| Tues. Nov. 22   | optimization impact      | |       | [Stabilizer](https://people.cs.umass.edu/~emery/pubs/stabilizer-asplos13.pdf) | 
 | Tues. Nov. 29   | guest lecture (TBD)          |      |  | 
 | Thurs. Dec. 1   | final project presentations  |      |  | 
 
