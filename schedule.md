@@ -43,7 +43,7 @@ _dates will be modified to adjust for extra time spent on earlier modules._
 | Thurs, Nov. 10     | Halide          |    [slides](lectures/CSE211Nov10_fa2022.pdf)                  | slides |  
 | Tues, Nov. 15    | graph DSLs                                   |   [slides](lectures/irgl.pdf)                 | [irgl](https://cs.rochester.edu/~sree/papers/sree-oopsla2016.pdf)       | 
 | Thurs, Nov. 17   | compiling relaxed memory models        |      [slides](lectures/CSE211Nov17_fa2022.pdf)                 | slides| 
-| Tues, Nov. 22   | decoupled access/execute        |                    | [DAE paper](https://courses.cs.washington.edu/courses/cse590g/04sp/Smith-1982-Decoupled-Access-Execute-Computer-Architectures.pdf) | 
+| Tues, Nov. 22   | decoupled access/execute        |   [slides](lectures/CSE211Nov22_fa2022.pdf)                   | [DAE paper](https://courses.cs.washington.edu/courses/cse590g/04sp/Smith-1982-Decoupled-Access-Execute-Computer-Architectures.pdf) | 
 
 
 
