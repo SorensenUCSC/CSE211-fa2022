@@ -79,10 +79,10 @@ module singleport_1rw (
     always @(posedge clk) begin
         if (en) begin
             if (we)
-		        RAM[addr] <= di;
-		    else
-		        dout <= RAM[addr];
-		end
+		RAM[addr] <= di;
+	    else
+		dout <= RAM[addr];
+	end
     end
 endmodule
 ```
@@ -111,12 +111,12 @@ module dualport_1rw1r (
             if (wea)
                 ram[addra] <= dia;
             doa <= ram[addra];
-		end 
+	end 
     end
     always @(posedge clkb) begin
         if (enb) begin
             dob <= ram[addrb];
-		end 
+	end 
     end
 endmodule
 ```
@@ -129,7 +129,7 @@ always @(posedge clka) begin
         if (wea)
             ram[addra] <= dia;
         doa <= ram[addra];
-	end 
+    end 
 end
 ```
 This block acts as a 1RW port where data is written when `wea` is asserted and data is always read out from `doa` port. The second always block mimics the 1R port:
@@ -138,7 +138,7 @@ This block acts as a 1RW port where data is written when `wea` is asserted and d
 always @(posedge clkb) begin
     if (enb) begin
         dob <= ram[addrb];
-	end 
+    end 
 end
 ```
 It always reads data out on the `dob` port. To further look on other memories check the `examples/` folder. With some background on how memories are declared in Verilog let's look at how MemCompose works with them. 
