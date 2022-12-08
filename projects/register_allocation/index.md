@@ -199,7 +199,7 @@ Cons:
 - Trades off compilation time for accuracy
 
 ### More Steps in the Pipeline
-To complete live ranges, we need to get a CFG representation of our program. Luckily, we have an AST representation which we can use to create a CFG. This process is interesting, especially handling control flow statements where the CFG splits and rejoins at a later point. By tracking parents as we run through each statement we can properly link where each basic block and originate from, thus creating an accurate representation of the program. After the parents are linked up, we can link the children afterwards to finish our graph. This is the same technique PyCFG uses in its code and I referenced their implementation to gain an intuition for the technique.
+To complete live ranges, we need to get a CFG representation of our program. Luckily, we have an AST representation which we can use to create a CFG. This process is interesting, especially handling control flow statements where the CFG splits and rejoins at a later point. By tracking parents as we run through each statement we can properly link where each basic block and originate from, thus creating an accurate representation of the program. After the parents are linked up, we can link the children afterwards to finish our graph. This is the same technique PyCFG uses in its code and I referenced the implementation as outlined in appendix of [The Fuzzing Book](https://www.fuzzingbook.org/) to gain an intuition for the technique.
 
 ![pipeline2](images/pipe2.png)
 
