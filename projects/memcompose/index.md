@@ -297,3 +297,9 @@ There are still some stuff that remains unconvered in this report due to the lar
 1. Add support for other PDKs that OpenRAM support
 2. Add support for multi-port memories (more than dual-port)
 3. Add support for generating latch-based register files instead of SRAMs
+
+# Citation
+
+This project uses PyVerilog (https://github.com/PyHDI/Pyverilog)
+
+This project generates configuration files for OpenRAM (https://github.com/VLSIDA/OpenRAM)
