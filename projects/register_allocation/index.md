@@ -280,6 +280,6 @@ Each of these algorithms have more optimized versions as well.
 
 Also I would have liked to add more visual output for the live intervals and the RIG. Maybe I will mess with generating them in through another tool.
 
-In all, this was a fun escapade into a subfield of compilers that I greatly enjoyed exploring. All the source code is on GitHub.
+In all, this was a fun escapade into a subfield of compilers that I greatly enjoyed exploring. All the source code is on GitHub, feel free to check out the implementation. 
 
 
