@@ -1,31 +1,31 @@
 # Introduction
-MemCompose was made as part of the final project of CSE 211. This tool is a memory synthesis compiler that automates the memory synthesis for ASIC backend.
+MemCompose was made as part of the final project of CSE 211. It is a synthesis compiler that automates the memory synthesis for ASIC backend.
 Since this project is more hardware oriented a brief background is presented to be able to comprehend what problem is being solved.
 # Background
 The traditional hardware design flow roughly follows the following diagram:
 
 ![background](./images/background.png)
 
-The hardware logic is usually written in a hardware description language named Verilog. This logic modeled in Verilog is generally called Register-Transfer Level (RTL). Like any other software project, once the hardware is modeled it is verified using testbenches to make sure it performs its intended behavior. After verification, the RTL is provided to a synthesizer to transform higher level constructs written in Verilog to actual gates and flip-flops. It is the job of the synthesizer to take a higher abstraction of logic and transform it to low-level Verilog with only gates also known as gate-level netlis. In the above diagram a tool called Yosys is mentioned which is an open-source synthesis tool. The gate-level netlist is then passed on to either FPGA based Electronic Design Automation (EDA) tools or ASIC based EDA tools depending upon the backend target.
+The hardware logic is usually written in a hardware description language named Verilog. This logic modeled in Verilog is generally called Register-Transfer Level (RTL). Like any other software project, once the hardware is modeled it is verified using testbenches to verify the intended behavior. After verification, the RTL is consumed by a synthesizer to transform higher level constructs written in Verilog to actual gates and flip-flops known as gate-level netlist. In the above diagram, Yosys is mentioned which is an open-source synthesis tool. The gate-level netlist is then passed on to either FPGA based Electronic Design Automation (EDA) tools or ASIC based EDA tools depending upon the backend target.
 
 # Problem Statement
-Most of the hardware design requires some kind of memories to store certain data. In Verilog memories are generally declared as 2-D register arrays like:
+Most of the hardware design requires some kind of memories to store and retrieve data. In Verilog memories are generally declared as 2-D register arrays like:
 
 ```verilog
 reg [15:0] RAM [1023:0];
 ```
-The above syntax indicates a memory with 16 bit word size and a depth of 1024 rows. For the FPGA backend Yosys supports directly mapping these memory declarations to efficient Block RAMs (BRAMs) available on the FPGAs. This saves the time of the RTL designer as they don't have to think about porting their 2-D register array declarations on each FPGA. In short Yosys offers portability to the front-end designer. 
+The above syntax indicates a memory with 16 bit word size and a depth of 1024 rows. For the FPGA backend Yosys supports direct mapping of memory declarations to efficient Block RAMs (BRAMs) on a variety of FPGAs. This saves the RTL designer's effort of porting their 2-D register array declarations on each FPGA. In short, Yosys offers portability to the front-end designer. 
 
 Unfortunately, this automatic mapping is not available on the ASIC backend. The ASIC backend flow involves manually compiling the SRAMs by an SRAM compiler and instantiating the generated verilog file inside your design. The flow diagram for an ASIC backend is shown below.
 
 ![problem](./images/problem.png)
 
 This increases the time spent on the design entry stage since the designers have to call the SRAM compiler, pass in the parameters such as the word size, depth, and the number of ports and instantiate the generated verilog in their design. This causes the following problems:
-*  Increase in the time spent on verification since the          verification needs to be re-done with the new SRAM models. 
+*  Increase in the time spent on verification since the verification needs to be re-done with the new SRAM models. 
 
 * Susceptible to the designer's mistake of not choosing efficient memory parameters for the task.
 
-Compilers are known to automate and optimize such tasks. Moreover, Yosys already doing this mapping for FPGA backends further proves this problem to be automatable.
+Compilers are known to automate and optimize such tasks. Moreover, Yosys is already doing this mapping for FPGA backends which further proves this problem to be automatable.
 
 # How can we solve it?
 
@@ -53,7 +53,7 @@ The analysis is done on the dataflow graph generated from the RTL design. This p
 The backend is then used to write two different files. One is the modified RTL design with the memory instantiated inside it and the other is the configuration file that can be provided as input to the OpenRAM compiler for generating the memory.
 
 # Quick Memory Primer
-Before we see MemCompose working let's do a quick primer on the port types of memory and an example of how one looks in Verilog. Generally the most common memory port types supported by FPGA toolchains are:
+Before we see MemCompose working let's do a quick primer on the port types of memory and some examples of how one looks in Verilog. Generally the most common memory port types supported by FPGA toolchains are:
 
 1. Single-port 1RW (1 read or write) memory
 2. Dual-port 1R1W (1 read, and 1 write) memory
@@ -144,7 +144,7 @@ end
 It always reads data out on the `dob` port. To further look on other memories check the `examples/` folder. With some background on how memories are declared in Verilog let's look at how MemCompose works with them. 
 
 # Running MemCompose
-When given these memory files as input to MemCompose, it does the parsing, analysis and backend generation. The final output from the backend generation are two files:
+When given these memory files as input to MemCompose, it generates these two files:
 
 1. OpenRAM configuration file
 2. New Verilog RTL file with memory instantiated
@@ -156,7 +156,7 @@ We run the following command:
 python3 memcompose.py -t singleport_1rw -j examples/singleport_1rw/metadata.json examples/singleport_1rw/singleport_1rw.v
 ```
 
-Ignore the `-j` flag followed by the `metadata.json` file for now. It generates the configuration file by the name `singleport_1rw.py`. These are the contents of the configuration file:
+Ignore the `-j` flag followed by the `metadata.json` file for now (we'll cover this later). It generates the configuration file by the name `singleport_1rw.py`. These are the contents of the configuration file:
 
 ```python
 # this file is created by MemCompose - Muhammad Hadir Khan
@@ -252,7 +252,7 @@ end
 ```
 This block just stores the value read from the memory `dout_wire` into the register `dout` on positive edge of the clock since OpenRAM's model provides output on the negative edge of clock. 
 
-There is one more thing to it, notice the `~` symbol in front of `en` and `we` signals passed to the OpenRAM generated memory instance. We are inverting these signals and this is due to the fact that OpenRAM's behavioral models for memories always assume write enables and chip select to be `active low` but in our case the way we defined the single-port memory behavior above we assumed write enables and chip select to be `active high`. So we need a way to tell MemCompose about this polarity and also which signals are write enables, which signals are clock signals and which signals are used for address and data and so on. Since the compiler itself cannot make sense of them. This is where the `metadata.json` file we passed earlier comes into the picture. Let's look at it now for the single-port memory. It is available in `examples/singleport_1rw/metadata.json`. 
+There is one more thing to it, notice the `~` symbol in front of `en` and `we` signals passed to the OpenRAM generated memory instance. We are inverting these signals and this is due to the fact that OpenRAM's behavioral models for memories always assume write enables and chip select to be `active low` but in our case the way we defined the single-port memory behavior above we assumed write enables and chip select to be `active high`. So we need a way to tell MemCompose about this polarity and also which signals act as write enables, which signals act as clock signals and which signals are used for address and data and so on. Since the compiler itself cannot make sense of them. This is where the `metadata.json` file we passed earlier comes into the picture. Let's look at it now for the single-port memory. It is available in `examples/singleport_1rw/metadata.json`. 
 
 ```json
 {
@@ -300,6 +300,10 @@ There are still some stuff that remains unconvered in this report due to the lar
 
 # Citation
 
-This project uses PyVerilog (https://github.com/PyHDI/Pyverilog)
+PyVerilog - https://github.com/PyHDI/Pyverilog
 
-This project generates configuration files for OpenRAM (https://github.com/VLSIDA/OpenRAM)
+OpenRAM - https://github.com/VLSIDA/OpenRAM
+
+Yosys - http://yosyshq.net/yosys/
+
+Memory verilog files - https://docs.xilinx.com/r/en-US/ug901-vivado-synthesis/Single-Port-Block-RAM-No-Change-Mode-Verilog
