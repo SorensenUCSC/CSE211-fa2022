@@ -55,17 +55,17 @@ Code is usually written with two kinds of memory in mind: main memory, and stuff
 
 ![memory hierarchy](images/memory_hierarchy.png)
 
-Thus, it makes sense to optimize such that every time we need a variable, it comes from the fastest possible memory available to us. If we can allocate our registers properly, we may be able to ensure this behavior!
+Thus, it makes sense to optimize such that every time we need a variable, it comes from the fastest possible memory available to us. If we can allocate our registers properly, we may be able to attain this behavior!
 
 
 ## Compiler Pipeline
-To get to the algorithm implementations, we first must tackle creating a compiler pipeline. Linear Scan is simple and only requires an IR for our code, so we can do a simple process as shown below to start. Once we get to GraphColoring we will have to modify our pipeline a little bit.
+To get to the algorithm implementations, we first must tackle creating a compiler pipeline. Linear Scan is simple and only requires an IR for our code, so we can do a simple process as shown below to start. Once we get to GraphColoring we will have to modify our pipeline a little bit to generate a Control Flow Graph.
 
 ![pipeline](images/Sketch.png)
 
 The major considerations here are:
-- There is slight complexity introduced by how ANTLR decides to return the corresponding AST. As it doesn't opt for a token action style (like Flex+Bison), we must rely on its listener paradigm to form our own AST that we can freely mutate and traverse. This probably could have been done directly through the listener format, but I prefer having more control over the AST. 
-- Since this project is more about the algorithm implementation and how they fit into a compiler pipeline, I chose to mildly abstract away specific token details by creating a one-size-fits-all ASTNode class. Additionally, I only track if there is an operation being done and ignore what the actual operation is, since it won't affect the results of the register allocation. The operand is saved in the value field if a final ISA is to be generated.
+- There is slight complexity introduced by how ANTLR decides to return the corresponding AST. As it doesn't opt for a token action style (like Flex+Bison), we must rely on its listener system to form our own AST that we can freely mutate and traverse. This probably could have been done directly through the listener system, but I prefer having more control over the AST. 
+- Since this project is more about the algorithm implementation and how they fit into a compiler pipeline, I chose to (mildly) abstract away specific token details by creating a one-size-fits-all ASTNode class. Additionally, I only track if there is an operation being done and ignore what the actual operation is, since it won't affect the results of the register allocation. The operand is saved in the value field if a final ISA is to be generated.
 - This is a very simple language that only supports the main control flow blocks if/while, plus minus operations, greater/less than, and variable declarations. Just enough to create interesting programs!
 
 ### Stage 1: Parsing/Lexing
@@ -83,13 +83,13 @@ Here is the sample code we will be using in our program:
 Here we create our AST using our listener handlers. Through a simple stack machine approach, we can create an AST that looks like the following:
 [![](https://mermaid.ink/img/pako:eNpVlMFuGjEQhl8l8rUkwjNjexepOeXaU3tq3cMWlgQp7EZ0UZKivHv_saUx4QSfPMz_2WNf3HbejW7j9s_z6_ZpOC03Px7ytP6V3Wmel-x-48ft7b3Pkwf7WoAHoDwRwM4A54kBvJVInsRKBCDkKQAMBmKeIgBZScpTspIE0OWpA_hjoM9TD8At2Brt1y1aYZpW426vGAJ7-hTQI7LnVsrKkNpr7LcrhuBek3-pLChDdh_NpjLE98nilhYQ8F1r0SmDg1eJ98YIFrS2FqS1BAvytseV6baTmRUEC2oWpIkJFiTWojJYULMgTUywoNhYVAYLSq22MGhQZ_tea6FB_acoDAtWi8O-MC4QGqwa95WVWYEGk_WoTAdIPcJVLTxYPS6V6dAwPDiYL2sWhgdH26rK4MHJ3Finh-HBnZ1uZfDgdhylh0BE2lBJGWd4iLd1lcFDyHoIKYOHcFtXmN4Fsb2qPeAhoW2WaGiBiETbLNHNF4hIO5DKICIqgvFvxTCR3nZLer1zMAnNJGjqAJPQBqsymIRmEjR1gEngtq4wmIQ2WeWUgl7sYH2DZgkQCbH11dABIiG1_ysMIkFFbivTyxDgEdqJFBbhEdd2cto2QiO2RynqEEVoRNV4vWLQiGxqUS9DhEYUi1IZNGIw5lbuOJ6Ow2GH1_GSp5ub7Jan8Thmt8HX3bgfzs94IPP0gaXDeZm_v09bt9kPz3_HlTu_7IZlfDgMj6fhaPRlmNzm4t7chu-YuJe-89wJpcSycu9u41O4k-R9il6SxHUvHyv3b57xF_5uXT_JJ0rUSbdy4-6wzKdv9QkvL3np8bMULKfz-PEf5VShYQ?type=png)](https://mermaid.live/edit#pako:eNpVlMFuGjEQhl8l8rUkwjNjexepOeXaU3tq3cMWlgQp7EZ0UZKivHv_saUx4QSfPMz_2WNf3HbejW7j9s_z6_ZpOC03Px7ytP6V3Wmel-x-48ft7b3Pkwf7WoAHoDwRwM4A54kBvJVInsRKBCDkKQAMBmKeIgBZScpTspIE0OWpA_hjoM9TD8At2Brt1y1aYZpW426vGAJ7-hTQI7LnVsrKkNpr7LcrhuBek3-pLChDdh_NpjLE98nilhYQ8F1r0SmDg1eJ98YIFrS2FqS1BAvytseV6baTmRUEC2oWpIkJFiTWojJYULMgTUywoNhYVAYLSq22MGhQZ_tea6FB_acoDAtWi8O-MC4QGqwa95WVWYEGk_WoTAdIPcJVLTxYPS6V6dAwPDiYL2sWhgdH26rK4MHJ3Finh-HBnZ1uZfDgdhylh0BE2lBJGWd4iLd1lcFDyHoIKYOHcFtXmN4Fsb2qPeAhoW2WaGiBiETbLNHNF4hIO5DKICIqgvFvxTCR3nZLer1zMAnNJGjqAJPQBqsymIRmEjR1gEngtq4wmIQ2WeWUgl7sYH2DZgkQCbH11dABIiG1_ysMIkFFbivTyxDgEdqJFBbhEdd2cto2QiO2RynqEEVoRNV4vWLQiGxqUS9DhEYUi1IZNGIw5lbuOJ6Ow2GH1_GSp5ub7Jan8Thmt8HX3bgfzs94IPP0gaXDeZm_v09bt9kPz3_HlTu_7IZlfDgMj6fhaPRlmNzm4t7chu-YuJe-89wJpcSycu9u41O4k-R9il6SxHUvHyv3b57xF_5uXT_JJ0rUSbdy4-6wzKdv9QkvL3np8bMULKfz-PEf5VShYQ)
 
-For ASTNodes with multiple children, I decided to just stick to a pattern for what goes where. For example, an IF node would have 2 or 3 children with the first being the condition, the second being the true block, and the optional third block for else. Ideally, there should be a base ASTNode abstract class which then gets extended for each specific node, adding in any fields the node may need. 
+For ASTNodes with multiple children, I decided to just stick to a pattern for the order of its children. For example, an IF node can have 2 or 3 children with the first being the condition, the second being the true block, and the optional third block for else. Ideally, there should be a base ASTNode abstract class which then gets extended for each specific node, adding in any fields the node may need. 
 
 Here is the ASTNode class:
 ![ast_node](images/ast_node.png)
 
 ### Stage 3: Traversing AST to Generate IR
-Finally, we get to a point where we have a representation of our code that we can work with to generate our IR and perform analysis. Technically, we don't need complete IR in terms of a text-based output, but for the sake of completion, the compiler generates a basic IR with branching statements to translate control flow blocks. Internally, only the line number, variables used, and variables declared are saved per execution statement as a vector, since this is all we need to compute the live interval. The IR is outputted as a text file:
+Finally, we get to a point where we have a representation of our code that we can work with to generate our IR and perform analysis. Technically, we don't need complete IR in terms of a text-based output, but for the sake of completion the compiler generates a basic IR with branching statements to translate control flow blocks. Internally, only the line number, variables used, and variables declared are saved per execution statement in a vector since this is all we need to compute the live interval. The IR is outputted as a text file:
 
 ![ir](images/ir.png)
 
@@ -133,7 +133,7 @@ d: [0, 19]
 ```
 
 ### Assign Registers
-Now that we have our intervals we run through each line of execution once more and see which variables need a register. Allocate a register if available, otherwise choose a variable to spill. A spilled register will be assigning the register number -1.
+Now that we have our intervals we run through each line of execution once more and see which variables need a register. Allocate a register if available, otherwise choose a variable to spill. A spilled register will be assigning the register number -1. Technically, linear scan is supposed to be evaluated between execution steps so we can correctly expire ranges. To imitiate this behavior, I buffer variables that need to expire and variables that need a register. I expire first and then assign so that if a variable can handoff its register automatically.
 
 Here is the resulting allocation for the following sample program with a max of 4 registers:
 
@@ -160,7 +160,7 @@ b: r-1
 a: r1
 d: r2
 ```
-Looks like `c` and `b` got spilled!
+Looks like `c` and `b` got spilled! For spilling heuristics I chose to spill nodes with the least range across the entirety of the program.
 
 ## Graph Coloring
 Now we move to a more precise approach. Graph Coloring uses the Live Ranges of a variable to determine how to allocate registers. By performing live variable analysis on a CFG, we can form a Register Interference Graph (RIG) to color. Create an edge in the RIG if two variables are live in the same block. Each variable will receive a different register/color than its neighbors.
@@ -199,7 +199,7 @@ Cons:
 - Trades off compilation time for accuracy
 
 ### More Steps in the Pipeline
-To complete live ranges, we need to get a CFG representation of our program. Luckily, we have an AST representation which we can use to create a CFG. This process is interesting, especially handling control flow statements where the CFG splits and rejoins at a later point. By tracking parents as we run through each statement we can properly link where each basic block and originate from, thus creating an accurate representation of the program. After the parents are linked up, we can link the children afterwards to finish our graph. This is the same technique PyCFG uses in its code and I referenced the implementation as outlined in appendix of [The Fuzzing Book](https://www.fuzzingbook.org/) to gain an intuition for the technique.
+To complete live ranges, we need to get a CFG representation of our program. Luckily, we have an AST representation which we can use to create a CFG. This process is interesting, especially handling control flow statements where the CFG splits and rejoins at a later point. By tracking parents as we run through each statement we can properly link where each basic block originates from, thus creating an accurate representation of the program. After the parents are linked up, we can link the children afterwards to finish our graph. This is the same technique PyCFG uses in its code and I referenced the implementation as outlined in appendix of [The Fuzzing Book](https://www.fuzzingbook.org/) to gain an intuition for the technique.
 
 ![pipeline2](images/pipe2.png)
 
@@ -254,7 +254,7 @@ d: y, x, c, b, a,
 
 ```
 
-Now we can assign registers. We start by removing nodes with edges less than the total number of registers specified. As we remove them, add them to a stack. If no node can be removed, remove the node with the most interference and continue. It may be possible to color it once we start adding nodes back, but otherwise we will spill it. Once all the nodes are removed, pop from the stack and assign colors to each variable.
+Now we can assign registers. We start by removing nodes with edges less than the total number of registers specified. As we remove them, add them to a stack. If no node can be removed, remove a node arbitrarily and continue. It may be possible to color it once we start adding nodes back, but otherwise we will spill it. Once all the nodes are removed, pop from the stack and assign colors to each variable.
 
 Here is the final coloring of our sample program with a max of 4 registers:
 
@@ -272,7 +272,9 @@ d: r3
 Note how no register is assigned to `w` as it wasn't live at the end of the program. For the sake of the example, I suppose it would have been nice to allocate `w` a register, but this is more correct.
 
 ## Conclusion, Considerations, and Continuation
-Wowie! The resulting code is a very interesting launchpad for a much more thorough implementation. Taking the final register data and outputting to RISCV and comparing speed would have been the next stage after and may be something I attempt. Look out for that in the GitHub repo! I think this investigation led to some crucial realizations about the compiler pipeline, specifically how many transformations your code goes through for analysis and the various passes needed to generate optimized code. Truly have a greater appreciation for the wizards who made clang and gcc. Some interesting optimizations that could be layered on top of these could be local value numbering and generally better spill heuristics.
+Wowie! The resulting code is a very interesting launchpad for a much more thorough implementation. I wrote all the algorithms without referencing the pseudocode outlined in the paper, so it might not be the exact way to carry out the algorithms but it seems like it works fine :) 
+
+ Taking the final register data and outputting to RISCV and comparing speed would have been the next stage after and may be something I attempt. Look out for that in the GitHub repo! I think this investigation led to some crucial realizations about the compiler pipeline, specifically how many transformations your code goes through for analysis and the various passes needed to generate optimized code. Truly have a greater appreciation for the wizards who made clang and gcc. Some interesting optimizations that could be layered on top of these could be local value numbering and generally better spill heuristics. 
 
 Each of these algorithms have more optimized versions as well.
 -  The linear scan algorithm can be extended with Second Chance Bin Packing in which we can use live range data to more efficiently assign registers and account for holes. 
