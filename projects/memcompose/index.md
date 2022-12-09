@@ -298,6 +298,12 @@ There are still some stuff that remains unconvered in this report due to the lar
 2. Add support for multi-port memories (more than dual-port)
 3. Add support for generating latch-based register files instead of SRAMs
 
+# Source code
+
+The source code is available here: https://github.com/hadirkhan10/MemCompose
+
+Don't forget to star :)
+
 # Citation
 
 PyVerilog - https://github.com/PyHDI/Pyverilog
