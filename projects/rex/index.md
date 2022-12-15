@@ -1,3 +1,9 @@
+---
+title: "REX: A Declarative Regular Expression Language"
+layout: single
+classes: wide
+---
+
 # REX: A Declarative Regular Expression Language
 
 Authors:
