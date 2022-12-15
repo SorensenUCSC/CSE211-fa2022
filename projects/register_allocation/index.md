@@ -1,4 +1,8 @@
-# An Investigation in Various Register Allocation Methods
+---
+title: "An Investigation in Various Register Allocation Methods"
+layout: single
+classes: wide
+---
 
 Neal Chokshi
 
