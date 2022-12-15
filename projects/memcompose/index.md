@@ -1,5 +1,5 @@
 ---
-title: "GPU Compute Benchmarking with WebGPU"
+title: "MemCompose"
 layout: single
 classes: wide
 ---
