@@ -1,3 +1,9 @@
+---
+title: "GPU Compute Benchmarking with WebGPU"
+layout: single
+classes: wide
+---
+
 # Introduction
 MemCompose was made as part of the final project of CSE 211. It is a synthesis compiler that automates the memory synthesis for ASIC backend.
 Since this project is more hardware oriented a brief background is presented to be able to comprehend what problem is being solved.
