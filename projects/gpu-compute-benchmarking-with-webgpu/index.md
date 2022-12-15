@@ -4,8 +4,6 @@ layout: single
 classes: wide
 ---
 
-# GPU Compute Benchmarking with WebGPU
-
 ### By Devon McKee
 
 ## Table of Contents
